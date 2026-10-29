@@ -1,0 +1,203 @@
+
+/* General styling */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef5ff, #dbeafe);
+  color: #334155;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background: linear-gradient(120deg, #1d4ed8, #60a5fa);
+  color: white;
+  text-align: center;
+  padding: 45px 20px;
+}
+
+header h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+header h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #bfdbfe;
+  border-radius: 5px;
+  margin: 14px auto 0;
+}
+
+header p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #eff6ff;
+  margin: 0;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Profile card */
+.profile-card {
+  width: 100%;
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 35px;
+  background: white;
+  border: 1px solid #dbeafe;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(37, 99, 235, 0.12);
+}
+
+.profile-card h2 {
+  color: #1e3a8a;
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0 0 22px;
+  overflow-wrap: anywhere;
+}
+
+.profile-card h3 {
+  color: #2563eb;
+  font-size: 21px;
+  margin: 28px 0 14px;
+  padding-left: 12px;
+  border-left: 4px solid #60a5fa;
+}
+
+.profile-card p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.9;
+  margin: 12px 0 20px;
+}
+
+.profile-card .biography {
+  text-align: left;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+  padding-left: 22px;
+  line-height: 1.8;
+}
+
+.skills-list li {
+  padding-left: 5px;
+  overflow-wrap: anywhere;
+}
+
+.skills-list li::marker {
+  color: #3b82f6;
+}
+
+/* Footer */
+footer {
+  background: #172554;
+  color: #dbeafe;
+  text-align: center;
+  padding: 22px 15px;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  header {
+    padding: 35px 18px;
+  }
+
+  .main-content {
+    padding: 0 12px;
+  }
+
+  .profile-card {
+    margin: 28px auto;
+    padding: 25px;
+  }
+
+  .skills-list {
+    gap: 8px 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  header {
+    padding: 28px 15px;
+  }
+
+  header h1 {
+    letter-spacing: 0;
+  }
+
+  header p {
+    font-size: 15px;
+  }
+
+  .main-content {
+    padding: 0 10px;
+  }
+
+  .profile-card {
+    margin: 20px auto;
+    padding: 20px 16px;
+    border-radius: 14px;
+  }
+
+  .profile-card h2 {
+    font-size: 23px;
+  }
+
+  .profile-card h3 {
+    font-size: 18px;
+  }
+
+  .profile-card p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .skills-list {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  footer {
+    padding: 18px 12px;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+}
